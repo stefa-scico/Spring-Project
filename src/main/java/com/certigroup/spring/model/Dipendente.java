@@ -3,8 +3,8 @@ package com.certigroup.spring.model;
 
 import java.io.Serializable;
 import java.util.Date;
-import com.fasterxml.jackson.databind.annotation.JsonSerialize;
-import com.fasterxml.jackson.databind.ser.std.DateSerializer;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
 
 public class Dipendente implements Serializable {
 	
@@ -12,12 +12,12 @@ public class Dipendente implements Serializable {
 	private Integer id;
 	private String nome;
 	private String cognome;
+	@JsonFormat(pattern = "dd-MM-yyyy")
 	private Date dataNascita;
 	
 	public Dipendente() {}
 	
 	public Dipendente(int id, String nome, String cognome, Date dataNascita) {
-		super();
 		this.id = id;
 		this.nome = nome;
 		this.cognome = cognome;
@@ -42,7 +42,7 @@ public class Dipendente implements Serializable {
 	public void setCognome(String cognome) {
 		this.cognome = cognome;
 	}
-	@JsonSerialize(using=DateSerializer.class)
+
 	public Date getDataNascita() {
 		return dataNascita;
 	}

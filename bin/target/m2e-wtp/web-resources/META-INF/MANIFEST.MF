@@ -1,5 +1,10 @@
 Manifest-Version: 1.0
+<<<<<<< HEAD
 Built-By: certimeter
 Build-Jdk: 12.0.2
+=======
+Built-By: 8G104609H
+Build-Jdk: 11.0.4
+>>>>>>> 3ee0de7ed53b85f8e3b51a671cfb9afec5c73e5b
 Created-By: Maven Integration for Eclipse
 
