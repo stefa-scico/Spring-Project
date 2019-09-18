@@ -13,12 +13,14 @@ import com.certigroup.spring.repository.DipendenteRepository;
 @RequestMapping("/api/dipendente")
 public class DipendenteController {
 	
-	@Autowired
 	private DipendenteRepository dipendenteRepo;
-	public DipendenteController() {
+	
+	@Autowired
+	public DipendenteController(DipendenteRepository dipendenteRepo) {
+		this.dipendenteRepo = dipendenteRepo;
 	}
 	
-	@RequestMapping(value = "/", method = RequestMethod.GET)
+	@RequestMapping(value = "", method = RequestMethod.GET)
 	@ResponseBody
 	public List<Dipendente> get()
 	{
