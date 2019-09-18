@@ -25,4 +25,7 @@
 	
 	<beans:bean id="dipendenteRepository" class="com.certigroup.spring.repository.DipendenteRepository">		
 	</beans:bean>
+	<beans:bean id="permessoRepository" class="com.certigroup.spring.repository.PermessoRepository">
+		<beans:constructor-arg ref="dipendenteRepository" name="dipendenteRepo"/>
+	</beans:bean>
 </beans:beans>
