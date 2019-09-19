@@ -6,12 +6,13 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-
+import org.springframework.stereotype.Repository;
 
 import com.certigroup.spring.model.Dipendente;
 import com.certigroup.spring.model.Permesso;
 
-public class PermessoRepository implements Repository<Permesso> {
+@Repository
+public class PermessoRepository implements ObjectRepository<Permesso> {
 
 	int lastId;
 	

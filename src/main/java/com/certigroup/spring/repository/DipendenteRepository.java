@@ -6,9 +6,12 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.springframework.stereotype.Repository;
+
 import com.certigroup.spring.model.Dipendente;
 
-public class DipendenteRepository implements Repository<Dipendente> {
+@Repository
+public class DipendenteRepository implements ObjectRepository<Dipendente> {
 	int lastId;
 	Map<Integer, Dipendente> dipData = new HashMap<Integer, Dipendente>();
 	

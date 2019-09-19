@@ -2,7 +2,7 @@ package com.certigroup.spring.repository;
 
 import java.util.List;
 
-public interface Repository<T> {
+public interface ObjectRepository<T> {
 	public List<T> get();
 	
 	public T get(int id);

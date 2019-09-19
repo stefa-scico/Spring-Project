@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 public class Dipendente implements Serializable {
 	
 	private static final long serialVersionUID = 8251222167565013150L;
+	
 	private Integer id;
+	
 	private String nome;
+	
 	private String cognome;
+	
 	@JsonFormat(pattern = "dd-MM-yyyy")
 	private Date dataNascita;
 	
@@ -42,7 +46,6 @@ public class Dipendente implements Serializable {
 	public void setCognome(String cognome) {
 		this.cognome = cognome;
 	}
-
 	public Date getDataNascita() {
 		return dataNascita;
 	}
